@@ -20,7 +20,7 @@ const social = [
 ];
 function Footer() {
   return (
-    <div className="bg-blue-50 w-full z-1">
+    <div className="bg-blue-50 w-full z-1 border-t border-blue-600">
       <div className="max-w-screen-2xl mx-auto py-10 md:py-16  px-5">
         <div className="flex justify-between items-center">
           <div>

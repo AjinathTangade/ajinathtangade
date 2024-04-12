@@ -42,12 +42,13 @@ function Banner() {
           </div>
           <div className="basis-1/12"></div>
           <div className="basis-5/12">
-            <img
-              src="./banner-1-1.png"
-              alt=""
-              className="w-full animate-fade-up animate-infinite animate-delay-[24ms] animate-ease-in animate-alternate-reverse"
-            />
-          </div>
+  <img
+    src="./banner-1-1.png"
+    alt=""
+    className="w-full animate-heartbeat"
+  />
+</div>
+
         </div>
       </div>
     </div>

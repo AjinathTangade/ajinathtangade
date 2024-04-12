@@ -5,6 +5,7 @@ import Services from '../Services';
 import Experiences from '../Experiences';
 import Gettouch from '../Gettouch';
 import Featured from '../Featured';
+import Contact from '../Contact/Contact';
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
       <Featured/>
       <Experiences />
       <Gettouch />
-    
+      <Contact />
     </div>
   )
 }

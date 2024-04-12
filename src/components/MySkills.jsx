@@ -51,11 +51,7 @@ const skills = [
     tech: "shadcn/ui",
     img: "bars-sort.svg",
   },
-
-  
-
 ];
-
 function MySkills() {
   return (
     <div className="max-w-screen-xl mx-auto py-10 md:py-16 px-5">
@@ -65,14 +61,22 @@ function MySkills() {
         </h2>
         <div className="absolute top-[30px] -z-50 w-5/12 md:w-3/12 lg:w-3/12 xl:w-3/12 bg-amber-300 h-7 xl:top-[51px] "></div>
       </div>
-      <div className="flex gap-14 flex-wrap mx-auto justify-center mt-20">
+      <div className="flex gap-10 lg:gap-14 flex-wrap mx-auto justify-center mt-20">
         {skills.map((tech, index) => (
           <div className="group relative">
-            <h3 className="group-hover:block hidden text-sm	lg:text-xl font-semibold text-center absolute -top-10 w-[8  0px] lg:w-[110px]">{tech.tech}</h3>
-            <div className=" h-20 w-20 lg:h-24 bg-sky-50 rounded-full lg:w-24 flex justify-center group-hover:bg-white group-hover:shadow-lg cursor-pointer py-6
+            <h3 className="group-hover:block hidden text-sm	lg:text-xl font-semibold text-center absolute -top-10 w-[80px] lg:w-[110px]">
+              {tech.tech}
+            </h3>
+            <div
+              className="h-20 w-20 md:w-20 md:h-20 lg:h-24 bg-sky-50 rounded-full lg:w-24 flex justify-center group-hover:bg-white group-hover:shadow-lg cursor-pointer py-6
                                 transform transition duration-500 
-                                group-hover:scale-110">
-              <img src={tech.img} alt={tech.tech} className="grayscale w-14 object-contain group-hover:grayscale-0" />
+                                group-hover:scale-110"
+            >
+              <img
+                src={tech.img}
+                alt={tech.tech}
+                className="grayscale w-14 object-contain group-hover:grayscale-0"
+              />
             </div>
           </div>
         ))}

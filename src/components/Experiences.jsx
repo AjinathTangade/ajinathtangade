@@ -21,8 +21,8 @@ function Experiences() {
               content here', making it look like readable English.
             </p>
             <div className="mt-6 relative z-20" >
-              <h3 className="text-4xl font-bold">Eduction</h3>
-          <div className="absolute top-[30px] -z-50 w-4/12 md:w-2/12 lg:w-3/12 xl:w-2/12 bg-amber-300 h-2  "></div>
+              <h3 className="text-4xl font-bold">Education</h3>
+          <div className="absolute top-[30px] -z-50 w-4/12 md:w-2/12 lg:w-3/12 xl:w-2/12 bg-amber-300 h-2"></div>
 
               <p className="text-base  text-gray-500 pt-2">
                 It is a long established fact that a reader will be distracted

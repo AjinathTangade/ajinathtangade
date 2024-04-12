@@ -10,13 +10,28 @@ const NavLink = [
   },
   {
     id: 2,
-    label: "Case Studies",
-    href: "allprojects",
+    label: "Service",
+    href: "#service",
   },
   {
     id: 3,
+    label: "Skills",
+    href: "#skills",
+  },
+  {
+    id: 4,
+    label: "Projects",
+    href: "#projects",
+  },
+  {
+    id: 5,
+    label: "Experience",
+    href: "#experience",
+  },
+  {
+    id: 6,
     label: "Contact",
-    href: "contact",
+    href: "#contact",
   },
 ];
 
@@ -41,7 +56,7 @@ function NavBar() {
                   {NavLink.map((link, index) => (
                     <li key={index}>
                       <Link
-                       to={link.href}
+                        to={link.href}
                         className="block py-2 px-3 text-base text-black font-semibold"
                         aria-current="page"
                       >
@@ -62,11 +77,10 @@ function NavBar() {
                   <p>Resume</p>
                 </Link>
               </div>
-              
             </div>
             <div className="block md:hidden">
-                <MobileNav NavLinks={NavLink} />
-              </div>
+              <MobileNav NavLinks={NavLink} />
+            </div>
           </div>
         </div>
       </nav>
