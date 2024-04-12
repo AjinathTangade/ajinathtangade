@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Banner() {
   return (
@@ -32,9 +33,9 @@ function Banner() {
               </p>
             </div>
             <div className="flex gap-3 ">
-              <button className="h-14 w-full max-w-40 rounded-full bg-blue-600 font-semibold text-lg text-white">
+              <Link to="/allprojects" className="h-14 w-full max-w-40 rounded-full bg-blue-600 font-semibold flex justify-center items-center text-lg text-white">
                 My work
-              </button>
+              </Link>
               <span className="h-14 w-full max-w-72 bg-white rounded-full font-medium text-md text-gray-500 text-center flex justify-center items-center">
                 glen.mccallum@live.co.uk
               </span>
