@@ -10,6 +10,15 @@ import {
 import { Link } from "react-router-dom";
 
 function MobileNav({ NavLinks }) {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 70, // Adjusted by header height if needed
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div>
       <Sheet>
@@ -23,13 +32,27 @@ function MobileNav({ NavLinks }) {
                 <ul className="flex flex-col pt-5 font-medium text-left">
                   {NavLinks.map((link, index) => (
                     <li key={index}>
-                      <Link
-                        href={link.href}
-                        className="block py-2 text-base text-black font-semibold"
-                        aria-current="page"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.section ? (
+                        <Link
+                          onClick={() =>
+                            scrollToSection(link.href.substring(1))
+                          }
+                          className="block py-2  text-base text-black font-semibold"
+                          aria-current="page"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <Link
+                          onClick={() =>
+                            scrollToSection(link.href.substring(1))
+                          }
+                          className="block py-2 text-base text-black font-semibold"
+                          aria-current="page"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

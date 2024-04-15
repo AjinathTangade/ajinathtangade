@@ -3,7 +3,7 @@ import FeaturedProjects from "./FeaturedProjects";
 import {feaProjects} from "../Featured";
 function Allprojects() {
   return (
-    <div className="w-full z-1">
+    <div className="w-full z-1" >
       <div className="max-w-screen-xl mx-auto py-10 md:py-24 px-5 mt-12">
         <div className="relative z-20 flex justify-center items-center">
           <h2 className="mt-3 text-4xl lg:text-5xl xl:text-6xl font-black z-20 ">

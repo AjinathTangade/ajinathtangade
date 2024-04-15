@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Banner() {
   return (
-    <div className="bg-[#f3f8ff] w-full z-1">
+    <div className="bg-[#f3f8ff] w-full z-1" id="home">
       <div className="max-w-screen-xl mx-auto py-10 md:py-20 mt-20 px-5">
         <div className="block md:flex">
           <div className="basis-6/12">

@@ -54,7 +54,7 @@ const skills = [
 ];
 function MySkills() {
   return (
-    <div className="max-w-screen-xl mx-auto py-10 md:py-16 px-5">
+    <div className="max-w-screen-xl mx-auto py-10 md:py-16 px-5" id="skills">
       <div className="relative z-20 flex justify-center items-center">
         <h2 className="mt-3 text-4xl lg:text-5xl xl:text-6xl font-black z-20 ">
           My Skills
@@ -63,7 +63,7 @@ function MySkills() {
       </div>
       <div className="flex gap-10 lg:gap-14 flex-wrap mx-auto justify-center mt-20">
         {skills.map((tech, index) => (
-          <div className="group relative">
+          <div className="group relative" key={index}>
             <h3 className="group-hover:block hidden text-sm	lg:text-xl font-semibold text-center absolute -top-10 w-[80px] lg:w-[110px]">
               {tech.tech}
             </h3>

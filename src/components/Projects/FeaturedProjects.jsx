@@ -5,7 +5,7 @@ import "@flaticon/flaticon-uicons/css/all/all.css";
 function FeaturedProjects({feaProjects}) {
   return (
     
-      <div className="mt-10">
+      <div className="mt-10" id="projects">
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {feaProjects.map((project, index) => (

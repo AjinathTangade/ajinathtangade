@@ -1,41 +1,57 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "@flaticon/flaticon-uicons/css/all/all.css";
 import MobileNav from "./MobileNav";
+
 const NavLink = [
   {
     id: 1,
     label: "Home",
-    href: "/",
+    href: "#home",
+    current: true,
   },
   {
     id: 2,
     label: "Service",
     href: "#service",
+    current: false,
   },
   {
     id: 3,
     label: "Skills",
     href: "#skills",
+    current: false,
   },
   {
     id: 4,
     label: "Projects",
     href: "#projects",
+    current: false,
   },
   {
     id: 5,
     label: "Experience",
     href: "#experience",
+    current: false,
   },
   {
     id: 6,
     label: "Contact",
     href: "#contact",
+    current: false,
   },
 ];
 
 function NavBar() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 70, // Adjusted by header height if needed
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="relative z-30">
       <nav className="bg-[#f3f8ff] fixed top-0 dark:bg-gray-900 w-full z-20 start-0 ">
@@ -55,13 +71,27 @@ function NavBar() {
                 <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-5 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                   {NavLink.map((link, index) => (
                     <li key={index}>
-                      <Link
-                        to={link.href}
-                        className="block py-2 px-3 text-base text-black font-semibold"
-                        aria-current="page"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.section ? (
+                        <Link
+                          onClick={() =>
+                            scrollToSection(link.href.substring(1))
+                          }
+                          className="block py-2 px-3 text-base text-black font-semibold"
+                          aria-current="page"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <Link
+                          onClick={() =>
+                            scrollToSection(link.href.substring(1))
+                          }
+                          className="block py-2 px-3 text-base text-black font-semibold"
+                          aria-current="page"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -78,9 +108,7 @@ function NavBar() {
                 </Link>
               </div>
             </div>
-            <div className="block md:hidden">
-              <MobileNav NavLinks={NavLink} />
-            </div>
+            <div className="block md:hidden"><MobileNav NavLinks={NavLink} /></div>
           </div>
         </div>
       </nav>

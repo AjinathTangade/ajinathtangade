@@ -2,7 +2,7 @@ import React from "react";
 
 function Experiences() {
   return (
-    <div className="bg-[#f3f8ff] w-full z-1">
+    <div className="bg-[#f3f8ff] w-full z-1" id="experience">
       <div className="max-w-screen-xl mx-auto py-10 md:pb-16 px-5">
         <div className="relative z-20 flex ">
           <h2 className="mt-3 text-4xl lg:text-5xl xl:text-6xl font-black z-20 ">
