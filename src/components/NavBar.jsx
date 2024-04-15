@@ -46,7 +46,7 @@ function NavBar() {
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 70, // Adjusted by header height if needed
+        top: section.offsetTop - 70, 
         behavior: "smooth",
       });
     }

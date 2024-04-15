@@ -22,7 +22,7 @@ function Footer() {
   return (
     <div className="bg-blue-50 w-full z-1 border-t border-blue-600">
       <div className="max-w-screen-2xl mx-auto py-10 md:py-16  px-5">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-center flex-col md:flex-row md:flex md:justify-between items-center">
           <div>
             <h3 className="text-md font-semibold text-gray-500 hover:text-blue-600">
               © 2024 Ajinath Tangade. All rights reserved.
